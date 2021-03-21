@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "@tensorflow/tfjs": "~3.3.0",
     "typescript": "~4.2.3",
-    "ts-node": "~9.1.1"
+    "ts-node": "~9.1.1",
+    "parcel-bundler": "~1.12.5"
   },
   "scripts": {
-    "start": "ts-node main.ts"
+    "start": "ts-node main.ts",
+    "watch": "parcel src/index.html --no-hmr --open",
+    "build": "parcel build src/index.html --no-minify --public-url ./"
   }
 }
