@@ -3,11 +3,13 @@
     "@tensorflow/tfjs": "~3.3.0",
     "typescript": "~4.2.3",
     "ts-node": "~9.1.1",
-    "parcel-bundler": "~1.12.5"
+    "parcel-bundler": "~1.12.5",
+    "firebase-tools": "~9.6.1"
   },
   "scripts": {
     "start": "ts-node main.ts",
     "watch": "parcel src/index.html --no-hmr --open",
-    "build": "parcel build src/index.html --no-minify --public-url ./"
+    "build": "tsc && parcel build src/index.html --out-dir public --no-minify --public-url ./",
+    "deploy": "yarn build && firebase deploy"
   }
 }
