@@ -1,3 +1,8 @@
 # ezgoodbuilds.net
 
-website
+
+```bash
+npm install
+yarn build
+yarn firebase deploy
+```
