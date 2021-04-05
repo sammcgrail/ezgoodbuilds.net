@@ -1,0 +1,10 @@
+.hello {
+  color: transparent;
+  background: url(https://media3.giphy.com/media/5SxdtXRaHYoG0QFa7P/giphy.gif);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 48px;
+  font-weight: bold;
+}
