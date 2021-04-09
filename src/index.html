@@ -1,9 +1,58 @@
-<div class="container">
-  EZ GOOD BUILDS . NET
-  <div class="hello">
-    ANUTHA ONE!
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      EZ GOOD BUILDS . NET
+      <div class="hello">
+        ANUTHA ONE!
+      </div>
+      <input type="file" id="photo">
+      <img id="image"/>
+      <button onclick="uploadImage()">upload ezgoodbuild</button>
+    </div>
+  </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
 
-<script src="main.ts"></script>
-<link rel="stylesheet" href="main.css">
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCQUUiHyHbGEZVqu1HgSqs1mx_zs0gOU6o",
+      authDomain: "test-website-79bbf.firebaseapp.com",
+      projectId: "test-website-79bbf",
+      storageBucket: "test-website-79bbf.appspot.com",
+      messagingSenderId: "1001403562937",
+      appId: "1:1001403562937:web:bea8fd52961188a7c7d468"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    function uploadImage()
+    {
+      const ref = firebase.storage().ref()
+      const file = document.querySelector("#photo").files[0]
+      const name = new Date() + '-' + file.name
+
+      const metadata = {
+        contentType: file.type
+      }
+
+      const task = ref.child(name).put(file, metadata)
+      task
+      .then(snapshot => snapshot.ref.getDownloadURL())
+      .then(url => {
+        console.log(url)
+        alert("image upload successful")
+        const image = document.querySelector('#image')
+        image.src = url
+      })
+    }
+  </script>
+
+  <script src="main.ts"></script>
+  <link rel="stylesheet" href="main.css">
+</html>
