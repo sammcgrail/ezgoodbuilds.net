@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "@tensorflow/tfjs": "~3.3.0",
-    "typescript": "~4.2.3",
-    "ts-node": "~9.1.1",
+    "@tensorflow/tfjs": "^3.3.0",
+    "firebase": "^8.4.2",
+    "firebase-tools": "~9.6.1",
     "parcel-bundler": "~1.12.5",
-    "firebase-tools": "~9.6.1"
+    "ts-node": "~9.1.1",
+    "typescript": "~4.2.3"
   },
   "scripts": {
     "start": "ts-node main.ts",
