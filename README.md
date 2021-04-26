@@ -2,10 +2,8 @@
 
 
 ```bash
-EZ&GOOD:
+EZ&GOOD FIRST STEPS:
 npm install
-yarn build
-yarn firebase deploy
 
 TO MAKE CHANGES:
 pull from origin main
