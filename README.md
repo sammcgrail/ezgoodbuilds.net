@@ -1,9 +1,11 @@
 # ezgoodbuilds.net
 
 
-```bash
+
 EZ&GOOD FIRST STEPS:
+```bash
 npm install
+```
 
 TO MAKE CHANGES:
 pull from origin main
@@ -13,6 +15,7 @@ commit, push
 pull request
 
 WHEN READY TO PUSH LIVE:
-"yarn build"
-"yarn firebase deploy"
+```bash
+yarn build
+yarn firebase deploy
 ```
