@@ -9,10 +9,21 @@
   font-weight: bold;
 }
 
+.imgGallery {
+  column-count: 3;
+  column-gap: 1em;
+  margin-top: 30px;
+}
+
+.galleryCard {
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
 .rotatingText {
   align-items: center;
   display: flex;
-  height: 100vh;
   text-align: center;
 }
 
